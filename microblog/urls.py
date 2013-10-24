@@ -19,7 +19,7 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
     # hands off the request to the microblogs app
-    url(r'^microblogs/', include('microblogs.urls', namespace = "mcroblogs")),
+    url(r'^$', include('microblogs.urls', namespace = "mcroblogs")),
 
      # url to match djangos requests for assets (js, css, img) and return them
     # change settings.Dev.... to STATIC_ROOT for production deployment (remember to run collectstatic too)

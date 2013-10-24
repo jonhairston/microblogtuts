@@ -1,1 +1,8 @@
 # Create your views here.
+from django.shortcuts import render, get_object_or_404
+from django.http import HttpResponseRedirect
+from django.core.urlresolvers import reverse
+
+
+def index(request):
+    return render(request,'index.html')

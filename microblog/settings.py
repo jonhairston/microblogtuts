@@ -4,7 +4,7 @@ PROJECT_URL = '127.0.0.1:8000'
 
 
 # helps us find paths for templates and static resources
-def pproject_path(dir):
+def project_path(dir):
     return os.path.join(os.path.dirname(os.path.dirname(__file__)), dir)
 
 DEBUG = True
@@ -68,9 +68,9 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = pproject_path('templates/collected')
+STATIC_ROOT = project_path('templates/collected')
 
-DEV_STATIC_ROOT = pproject_path('templates/static')
+DEV_STATIC_ROOT = project_path('templates/static')
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
@@ -81,7 +81,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    pproject_path('templates/static'),
+    project_path('templates/static'),
 )
 
 # List of finder classes that know how to find static files in
@@ -119,7 +119,7 @@ WSGI_APPLICATION = 'microblog.wsgi.application'
 
 
 TEMPLATE_DIRS = (
-    pproject_path('templates'),
+    project_path('templates'),
 )
 INSTALLED_APPS = (
     'django.contrib.auth',

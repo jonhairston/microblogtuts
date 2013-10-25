@@ -21,6 +21,7 @@ urlpatterns = patterns('',
     # hands off the request to the microblogs app
     url(r'^blog/', include('microblogs.urls', namespace="microblogs")),
 
+    # homepage url is outside of the "microblogs" namespace hence no colon
     url(r'^$', index, name='index'),
 
     # url to match djangos requests for assets (js, css, img) and return them

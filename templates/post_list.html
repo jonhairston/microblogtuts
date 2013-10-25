@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load url from future %}
+
+{% block page_title %}Blog Posts | {% endblock %}
+
+{% block page_content %}
+    <h1>Welcome to my blog</h1>
+    <h2>Blog Posts</h2>
+
+<ul>
+    {% for post in post_list %}
+{# If you namespaced the apps url then you need to do app:app's url to not that #}
+{# no reverse match error, which happens because django doesn't know which view goes with what app #}
+    <li><a href="{% url 'microblogs:blog_detail' post.pk %}">{{ post.title }}</a></li>
+    {% empty %}
+    <li>Sorry, no posts yet. Check back soon!</li>
+    {% endfor %}
+</ul>
+{% endblock %}

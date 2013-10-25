@@ -2,7 +2,7 @@ from django.conf.urls import patterns, include, url
 
 #improt our settings file to serve static assets
 from django.conf import settings
-
+from microblogs.views import blog_list
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
@@ -19,7 +19,7 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
     # hands off the request to the microblogs app
-    url(r'^$', include('microblogs.urls', namespace = "mcroblogs")),
+    url(r'^blog/', include('microblogs.urls', namespace="microblogs")),
 
      # url to match djangos requests for assets (js, css, img) and return them
     # change settings.Dev.... to STATIC_ROOT for production deployment (remember to run collectstatic too)

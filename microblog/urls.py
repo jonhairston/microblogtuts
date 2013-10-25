@@ -21,10 +21,10 @@ urlpatterns = patterns('',
     # hands off the request to the microblogs app
     url(r'^blog/', include('microblogs.urls', namespace="microblogs")),
 
-     # url to match djangos requests for assets (js, css, img) and return them
+    # url to match djangos requests for assets (js, css, img) and return them
     # change settings.Dev.... to STATIC_ROOT for production deployment (remember to run collectstatic too)
     # collectstatic pulls static files i.e. js and css and html( files that change often)
     # to the django files (files or infrastructure that will never change or rarely does)
     # so django can put them together to make the awesomeness that is a web page
-    url(r'^static/(?P<path>.*)$', 'django.views.static.serve',{'document_root': settings.STATIC_ROOT}),
+    url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
 )

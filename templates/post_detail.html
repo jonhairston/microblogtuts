@@ -4,8 +4,8 @@
 
 {% block page_content %}
 <h2>{{ post.title | linebreaks }}</h2>
-   <h3><a href="{% url 'microblogs:blog_list' %}">&larr; Blog list</a></h3>
+   <h3><a class="btn" href="{% url 'microblogs:blog_list' %}">&larr; Blog list</a></h3>
   <p>{{ post.content |linebreaks }}</p>
 <p>{{  post.updated_at }}</p>
-    <h3><a href="{% url 'microblogs:blog_list' %}">&larr; Blog list</a></h3>
+    <h3><a class="btn" href="{% url 'microblogs:blog_list' %}">&larr; Blog list</a></h3>
 {% endblock %}

@@ -8,7 +8,7 @@
     <h2>Blog Posts</h2>
 
 <ul>
-    {% for post in post_list %}
+    {% for posts in post_list %}
 {# If you namespaced the apps url then you need to do app:app's url to not that #}
 {# no reverse match error, which happens because django doesn't know which view goes with what app #}
     <li><h2><a href="{% url 'microblogs:blog_detail' post.pk %}">{{ post.title }}</a></h2></li>

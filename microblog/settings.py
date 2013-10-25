@@ -1,5 +1,6 @@
 # Django settings for microblog project.
 import os
+
 PROJECT_URL = '127.0.0.1:8000'
 
 
@@ -133,7 +134,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
     'microblogs',
-    'South',
+    'south',
 
 )
 

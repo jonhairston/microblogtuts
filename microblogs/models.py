@@ -13,7 +13,7 @@ class Post(models.Model):
     slug = models.SlugField(max_length=255, blank=True, default='')
     content = models.TextField()
     published = models.BooleanField(default=True)
-    author = models.ForeignKey(User, related_name="posts")
+    author = models.ForeignKey(User, related_name="post")
 
     class Meta:
         ordering = ["-created_at", "title"]

@@ -1,0 +1,12 @@
+/*anytime you make changes to me run collectstatic in manage.py to make sure my changes get updated */
+/*a {*/
+    /*color: firebrick;*/
+    /*font-weight: bold;*/
+/*}*/
+
+/*a:hover {*/
+    /*color: lightsteelblue;*/
+/*}*/
+ul{
+    list-style-type:none;
+}

@@ -1,3 +1,20 @@
+{% extends "base.html" %}
+{% load url from future %}
 <!DOCTYPE html>
-<h1>Hello Woild!!!!!!</h1>
+{% block head %}
+
+<head>
+    <title>Jon Hairston's Page</title>
+
+</head>
+    {{ block.super }}
+{% endblock %}
+<body>
+    {% block page_content %}
+        <h1>Hello Woild!!!!!!</h1>
+        <h2>This is my page. This is the first step in ALL YOUR BASE BELONG TO US!!!!!!!!1!</h2>
+        Words.That is all.
+        <h3><a class="btn" href="{% url 'microblogs:blog_list' %}">List o Blogs</a></h3>
+    {% endblock %}
+</body>
 </html>

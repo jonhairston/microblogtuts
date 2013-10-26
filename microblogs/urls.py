@@ -6,5 +6,5 @@ urlpatterns = patterns('',
 #heres a comment
 
     url(r'^$', blog_list, name ='blog_list'),
-    url(r'^blog/(?P<pk>\d+)/$', blog_detail, name= 'blog_detail'),
+    url(r'^(?P<pk>\d+)/$', blog_detail, name= 'blog_detail'),
 )

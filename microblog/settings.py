@@ -135,7 +135,7 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'microblogs',
     'south',
-
+    'restless',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
